@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>☃️ Snowman Builder</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>☃️ Build Your Snowman!</h1>
+
+<div id="container">
+
+<div id="ui">
+
+<h2>Head</h2>
+<button onclick="loadPart('head','head1.glb')">Happy</button>
+<button onclick="loadPart('head','head2.glb')">Cool</button>
+
+<h2>Torso</h2>
+<button onclick="loadPart('torso','torso1.glb')">Round</button>
+<button onclick="loadPart('torso','torso2.glb')">Fat</button>
+
+<h2>Bottom</h2>
+<button onclick="loadPart('bottom','bottom1.glb')">Big</button>
+<button onclick="loadPart('bottom','bottom2.glb')">Huge</button>
+
+<h2>Resize Head</h2>
+<input type="range" min="0.5" max="2"
+step="0.1"
+value="1"
+oninput="resizePart('head', this.value)">
+
+<button onclick="exportSTL()">Export STL</button>
+
+</div>
+
+<canvas id="canvas"></canvas>
+
+</div>
+
+<script type="module" src="app.js"></script>
+
+</body>
+</html>
